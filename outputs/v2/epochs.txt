@@ -1,0 +1,104 @@
+C:\tcc\tomato-leaf-pytorch\venv\Scripts\python.exe C:\tcc\tomato-leaf-pytorch\src\train.py --pretrained --epochs 11 --learning-rate 0.001
+[INFO]: Number of training images: 11208
+[INFO]: Number of validation images: 4803
+[INFO]: Class names: ['Tomato_Bacterial_spot', 'Tomato_Early_blight', 'Tomato_Late_blight', 'Tomato_Leaf_Mold', 'Tomato_Septoria_leaf_spot', 'Tomato_Spider_mites_Two_spotted_spider_mite', 'Tomato__Target_Spot', 'Tomato__Tomato_YellowLeaf__Curl_Virus', 'Tomato__Tomato_mosaic_virus', 'Tomato_healthy']
+
+Computation device: cpu
+Learning rate: 0.001
+Epochs to train for: 11
+
+[INFO]: Loading pre-trained weights
+[INFO]: Fine-tuning all layers...
+4,020,358 total parameters.
+4,020,358 training parameters.
+[INFO]: Epoch 1 of 11
+Training
+100%|██████████| 351/351 [20:57<00:00,  3.58s/it]
+Validation
+100%|██████████| 151/151 [02:50<00:00,  1.13s/it]
+Training loss: 0.328, training acc: 89.534
+Validation loss: 0.225, validation acc: 92.609
+--------------------------------------------------
+[INFO]: Epoch 2 of 11
+Training
+100%|██████████| 351/351 [20:52<00:00,  3.57s/it]
+Validation
+100%|██████████| 151/151 [02:50<00:00,  1.13s/it]
+Training loss: 0.132, training acc: 95.923
+Validation loss: 0.078, validation acc: 97.606
+--------------------------------------------------
+[INFO]: Epoch 3 of 11
+Training
+100%|██████████| 351/351 [20:55<00:00,  3.58s/it]
+Validation
+100%|██████████| 151/151 [02:49<00:00,  1.12s/it]
+Training loss: 0.089, training acc: 97.163
+Validation loss: 0.338, validation acc: 89.382
+--------------------------------------------------
+[INFO]: Epoch 4 of 11
+Training
+100%|██████████| 351/351 [20:57<00:00,  3.58s/it]
+Validation
+100%|██████████| 151/151 [02:49<00:00,  1.12s/it]
+Training loss: 0.071, training acc: 97.653
+Validation loss: 0.059, validation acc: 98.001
+--------------------------------------------------
+[INFO]: Epoch 5 of 11
+Training
+100%|██████████| 351/351 [20:54<00:00,  3.57s/it]
+Validation
+100%|██████████| 151/151 [02:50<00:00,  1.13s/it]
+Training loss: 0.063, training acc: 98.108
+Validation loss: 0.053, validation acc: 98.105
+--------------------------------------------------
+[INFO]: Epoch 6 of 11
+Training
+100%|██████████| 351/351 [20:58<00:00,  3.58s/it]
+Validation
+100%|██████████| 151/151 [02:49<00:00,  1.12s/it]
+Training loss: 0.064, training acc: 97.761
+Validation loss: 0.071, validation acc: 97.731
+--------------------------------------------------
+[INFO]: Epoch 7 of 11
+Training
+100%|██████████| 351/351 [20:57<00:00,  3.58s/it]
+Validation
+100%|██████████| 151/151 [02:49<00:00,  1.12s/it]
+Training loss: 0.049, training acc: 98.456
+Validation loss: 0.067, validation acc: 97.856
+--------------------------------------------------
+[INFO]: Epoch 8 of 11
+Training
+100%|██████████| 351/351 [21:00<00:00,  3.59s/it]
+Validation
+100%|██████████| 151/151 [02:50<00:00,  1.13s/it]
+Training loss: 0.049, training acc: 98.394
+Validation loss: 0.075, validation acc: 97.522
+--------------------------------------------------
+[INFO]: Epoch 9 of 11
+Training
+100%|██████████| 351/351 [20:56<00:00,  3.58s/it]
+Validation
+100%|██████████| 151/151 [02:49<00:00,  1.12s/it]
+Training loss: 0.044, training acc: 98.555
+Validation loss: 0.060, validation acc: 98.105
+--------------------------------------------------
+[INFO]: Epoch 10 of 11
+Training
+100%|██████████| 351/351 [20:58<00:00,  3.59s/it]
+Validation
+100%|██████████| 151/151 [02:50<00:00,  1.13s/it]
+Training loss: 0.045, training acc: 98.492
+Validation loss: 0.053, validation acc: 98.168
+--------------------------------------------------
+[INFO]: Epoch 11 of 11
+Training
+100%|██████████| 351/351 [20:57<00:00,  3.58s/it]
+Validation
+100%|██████████| 151/151 [02:49<00:00,  1.12s/it]
+Training loss: 0.031, training acc: 98.992
+Validation loss: 0.025, validation acc: 99.292
+--------------------------------------------------
+TRAINING COMPLETE
+
+Process finished with exit code 0
