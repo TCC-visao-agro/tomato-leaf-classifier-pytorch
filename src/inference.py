@@ -9,7 +9,7 @@ from torchvision import transforms
 VERSION = "v5"
 DATA_PATH = '../test_images'
 IMAGE_SIZE = 256
-DEVICE = 'cuda'
+DEVICE = 'cpu'
 # Class names.
 class_names = ['Tomato_Bacterial_spot', 'Tomato_Early_blight', 'Tomato_Late_blight', 'Tomato_Leaf_Mold', 'Tomato_Septoria_leaf_spot',
                'Tomato_Spider_mites_Two_spotted_spider_mite','Tomato__Target_Spot', 'Tomato__Tomato_YellowLeaf__Curl_Virus', 'Tomato__Tomato_mosaic_virus', 'Tomato_healthy'
@@ -18,7 +18,7 @@ class_names = ['Tomato_Bacterial_spot', 'Tomato_Early_blight', 'Tomato_Late_blig
 model = build_model(pretrained=False, fine_tune=False, num_classes=10)
 checkpoint = torch.load(f'../outputs/{VERSION}/model_pretrained_True.pth', map_location=DEVICE)
 print('Loading trained model weights...')
-model.load_state_dict(checkpoint['model_state_dict'], strict=False)
+model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
 # Get all the test image paths.
@@ -53,6 +53,7 @@ for image_path in all_image_paths:
 
     print(outputs[0])
     probabilities = torch.nn.functional.softmax(outputs[0], dim=0)
+    # prob = np.argmax(outputs[0])
     print(probabilities)
     # Check the top 5 categories that are predicted.
     top5_prob, top5_catid = torch.topk(probabilities, 5)
@@ -68,8 +69,8 @@ for image_path in all_image_paths:
     print()
     cv2.imshow('Result', orig_image)
     cv2.waitKey(0)
-    # outputs = outputs.detach().numpy()
-    # pred_class_name = class_names[np.argmax(outputs[0])]
+    pred_class_name = class_names[torch.argmax(outputs[0])]
+    print(pred_class_name)
     # print(f"GT: {gt_class_name}, Pred: {pred_class_name.lower()}")
     # # Annotate the image with ground truth.
     # cv2.putText(
